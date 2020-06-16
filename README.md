@@ -23,7 +23,8 @@ Feign client, configured with configuration file and FeignBuilder - the old scho
 3. Gradle wrapper is not configured, so use external Gradle
 
 ## Run
-Just use `gradle bootRun` or start through IntelliJ
+1. Update https://github.com/tonitagd/feign-demo/blob/master/feignclient-beanconfig/src/main/resources/configuration.properties with the proper values for Cards API connection
+2. Use `gradle bootRun` or start through IntelliJ
 
 ## External Resources
 1. Spring cloud documentation: https://cloud.spring.io/spring-cloud-openfeign/multi/multi_spring-cloud-feign.html
