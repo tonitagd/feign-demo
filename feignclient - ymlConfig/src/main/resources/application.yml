@@ -1,0 +1,29 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: feignclient
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+feign:
+  client:
+    config:
+      default: ## default configuration, will work for every client
+        connectTimeout: 1000000
+        readTimeout: 5000000
+        loggerLevel: BASIC
+      card:
+        loggerLevel: FULL
+       ## requestInterceptors:
+       ##   - com.example.interceptors.CustomInterceptor
+       ##   decode404: false
+       ##   encoder: com.example.encoder.CustomEncoder
+       ##   decoder: com.example.decoder.CustomDecoder
+
+logging.level.com.example.feignclient.feign.clients.CardClient: DEBUG
+logging.level.com.example.feignclient.feign.clients.RestClient: DEBUG
